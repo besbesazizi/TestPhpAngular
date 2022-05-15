@@ -1,0 +1,54 @@
+
+  <section class="wrapper bg-gray">
+    <div class="container py-14 pt-md-0 pb-md-16">
+     
+      <!-- /.row -->
+      <div class="row text-center">
+        <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+          <h2 class="fs-15 text-uppercase text-primary mb-3">Blog</h2>
+          <h3 class="display-4 mb-6">Check out some of our awesome projects with creative ideas and great design.</h3>
+        </div>
+          
+      <div>
+     
+        <div class="container">
+            <div class="row">
+            <div class="col-md-4" *ngFor="let response of  articles" >
+            <div class="card"   style="width: 18rem;">
+                <figure class="card-img-top overlay overlay-1 hover-scale"><a href="#"> <img [src]="response.Image" alt="" /></a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">Read More</h5>
+                  </figcaption>
+                </figure>
+                <div class="card-body">
+                    <div class="post-header">
+                      <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" >{{response.Title}}</a></h2>
+                    </div>
+                    <!-- /.post-header -->
+                    <div class="post-content">
+                      <p>{{response.Introduction}}.</p>
+                    </div>
+                    <!-- /.post-content -->
+                </div>
+                <div class="card-footer">
+                    <ul class="post-meta d-flex mb-0">
+                      <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{response.LastMod | date: 'dd MMM yyyy'}}</span></li>
+                      <li class="post-comments"><a href="#"><i class="uil uil-file-alt fs-15"></i>{{response.IdTheme}}</a></li>
+                    </ul>
+                    <!-- /.post-meta -->
+                </div>
+
+            </div>
+          
+            </div>
+           
+                
+            </div>
+        </div>
+      </div>
+      <!-- /.position-relative -->
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.content-wrapper -->
+</section>
